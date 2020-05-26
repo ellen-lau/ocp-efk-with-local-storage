@@ -1,6 +1,6 @@
 # Configuring EFK to run with PersistentVolumes provisioned by the LocalStorage Operator on FYRE
 
-NOTE: These instructions are a mix of the [LocalStorage Operator Guide](https://docs.openshift.com/container-platform/4.2/storage/persistent_storage/persistent-storage-local.html) and the [Deploying Cluster Logging Guide](https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-deploying.html), but with more specific YAML examples to FYRE. Some parts of those 2 guides are also unneeded; these instructions will specific when to use those guides and when to use the instructions here.
+NOTE: These instructions are a mix of the [LocalStorage Operator Guide](https://docs.openshift.com/container-platform/4.2/storage/persistent_storage/persistent-storage-local.html) and the [Deploying Cluster Logging Guide](https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-deploying.html), but with more specific YAML examples to FYRE. Some parts of those 2 guides are also unneeded; these instructions will specify when to use those guides and when to use the instructions here.
 
 It seems like ElasticSearch is not supported for NFS or distributed storage, and that the recommendation should be to use local disk storage, so these are instructions to get the EFK stack to run on PersistentVolumes (created for a specified local disk) provisioned by the LocalStorage Operator.
 
