@@ -29,9 +29,9 @@ spec:
   storageClassDevices:
     - storageClassName: "local-sc" # name of the storage class that will be created
       volumeMode: Filesystem 
-      fsType: xfs # for elasticsearch, the recommendations should be xfs or ext4,this has only been tested with xfs   
+      fsType: xfs # for elasticsearch, the recommendations should be xfs or ext4, this has only been tested with xfs   
       devicePaths: 
-        - /path/to/device # in FYRE OCP 4.3, this disk /dev/vdb can be used, should have 500Gi of storage 
+        - /dev/vdb # in FYRE OCP 4.3+, this disk /dev/vdb can be used, should have 500Gi of storage 
 
 ```
 
